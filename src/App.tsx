@@ -1,7 +1,12 @@
+import { Header } from "./components/Header";
+import { GlobalStyle } from "./styles/global";
+
 function App() {
   return (
     <div>
-      <p>Teste</p>
+      <p>teste</p>
+      <Header></Header>
+      <GlobalStyle/>
     </div>
   )
 }
