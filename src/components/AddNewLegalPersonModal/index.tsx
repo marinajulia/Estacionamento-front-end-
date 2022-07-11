@@ -23,13 +23,23 @@ export function NewLegalPersonModal({isOpen, onRequestClose}: NewLegalPersonModa
             <Container>
                 <h2>Cadastrar Nova Pessoa Jurídica</h2>
                 <input 
-                    placeholder="Nome" 
+                    placeholder="RazaoSocial" 
                     // value={title} 
                     // onChange={event => setTitle(event.target.value)}
                 />
                 <input 
+                    placeholder="Nome Fantasia" 
+                    // value={amount}
+                    // onChange={event => setAmount(Number(event.target.value))}
+                />
+                <input 
                     placeholder="CNPJ" 
                     type="number" 
+                    // value={amount}
+                    // onChange={event => setAmount(Number(event.target.value))}
+                />
+                <input 
+                    placeholder="Endereço" 
                     // value={amount}
                     // onChange={event => setAmount(Number(event.target.value))}
                 />
