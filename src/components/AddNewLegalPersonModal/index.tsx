@@ -1,6 +1,9 @@
 import Modal from 'react-modal';
 import { useLegalPerson } from '../../hooks/useLegalPerson';
 import { Container } from './styles';
+import InputMask from "react-input-mask";
+import close from '../../assets/close.png';
+import { useState } from 'react';
 
 interface NewLegalPersonModalProps{
     isOpen: boolean;
@@ -9,7 +12,10 @@ interface NewLegalPersonModalProps{
 
 export function NewLegalPersonModal({isOpen, onRequestClose}: NewLegalPersonModalProps){
     const {createLegalPerson} = useLegalPerson();
-
+    const [corporateName, setCorporateName] = useState('');
+    const [fantasyName, setFantasyName] = useState('');
+    const [cnpj, setCnpj] = useState('');
+    const [adress, setAdress] = useState('');
     return(
         <Modal 
         isOpen={isOpen}
@@ -18,29 +24,29 @@ export function NewLegalPersonModal({isOpen, onRequestClose}: NewLegalPersonModa
         className="react-modal-content"
         >
             <button type="button" onClick={onRequestClose} className="react-modal-close">
-                {/* <img src={close} alt="Fechar modal" /> */}
+                <img src={close} alt="Fechar modal" />
             </button>
             <Container>
                 <h2>Cadastrar Nova Pessoa Jurídica</h2>
                 <input 
-                    placeholder="RazaoSocial" 
-                    // value={title} 
+                    placeholder="Razão Social" 
+                    value={corporateName} 
                     // onChange={event => setTitle(event.target.value)}
                 />
                 <input 
                     placeholder="Nome Fantasia" 
-                    // value={amount}
+                    value={fantasyName}
                     // onChange={event => setAmount(Number(event.target.value))}
                 />
-                <input 
+                <InputMask 
                     placeholder="CNPJ" 
-                    type="number" 
-                    // value={amount}
+                    mask="99.999.999/999-99"
+                    value={cnpj}
                     // onChange={event => setAmount(Number(event.target.value))}
                 />
                 <input 
                     placeholder="Endereço" 
-                    // value={amount}
+                    value={adress}
                     // onChange={event => setAmount(Number(event.target.value))}
                 />
                 <button type="submit">Cadastrar</button>

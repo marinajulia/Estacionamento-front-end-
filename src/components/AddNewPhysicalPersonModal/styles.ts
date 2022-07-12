@@ -7,6 +7,13 @@ export const Container = styled.form`
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
+    h4{
+        color: var(--text-title);
+        margin-top: 1rem;
+    }
+    .radio{
+        margin-bottom: 1rem;
+    }
     input{
         width: 100%;
         padding: 0 1.5rem;
