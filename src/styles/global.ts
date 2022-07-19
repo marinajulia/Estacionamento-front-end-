@@ -1,6 +1,10 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+.data{
+    display: flex;
+    margin-top: 100px;
+}
     :root{
         --background: #f0f2f5;
         --red: #E52E4D;

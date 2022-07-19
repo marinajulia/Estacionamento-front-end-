@@ -4,6 +4,8 @@ import Modal from 'react-modal';
 import { useState } from "react";
 import { NewPhysicalPersonModal } from "./components/AddNewPhysicalPersonModal";
 import { NewLegalPersonModal } from "./components/AddNewLegalPersonModal";
+import { DataLegalPerson } from "./components/DataLegalPerson";
+import { DataPhysicalPerson } from "./components/DataPhysicalPerson";
 
 Modal.setAppElement('#root');
 
@@ -40,6 +42,11 @@ export function App() {
       isOpen={isNewLegalPersonModalOpen}
       onRequestClose={handleCloseNewLegalPersonModal}
       />
+      <div className="data">
+        <DataLegalPerson/>
+        <DataPhysicalPerson/>
+      </div>
+      
       <GlobalStyle/>
     </div>
   )
