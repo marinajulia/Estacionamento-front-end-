@@ -3,6 +3,7 @@ import {createGlobalStyle} from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 .data{
     display: flex;
+    justify-content: center;
     margin-top: 100px;
 }
     :root{

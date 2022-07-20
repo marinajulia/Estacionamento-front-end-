@@ -10,5 +10,6 @@ export const Container = styled.form`
     background-color: #6BA9C2;
     height: 40px;
 }   
-width: 150rem;
+width: 300px;
+margin-left: 300px;
 `
